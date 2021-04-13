@@ -6,7 +6,14 @@
 var lista = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 var inputUtente = prompt("Inserisci il tuo cognome");
 lista.push(inputUtente);
-
-document.writeln(lista);
 console.log(lista)
+
+var listaAlfabetica = lista.sort(function (a, b) {
+    if (a < b) return -1;
+    else if (a > b) return 1;
+    return 0;
+});
+
+
+document.writeln(listaAlfabetica);
 
