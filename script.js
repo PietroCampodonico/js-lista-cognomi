@@ -14,6 +14,16 @@ var listaAlfabetica = lista.sort(function (a, b) {
     return 0;
 });
 
+console.log (listaAlfabetica)
 
-document.writeln(listaAlfabetica);
+var i= 0;
+var listaDefinitiva = document.getElementById("cognomi")
+
+
+while (i < listaAlfabetica.length) {
+    listaDefinitiva.innerHTML += "<li>" + (i+1) + ") " + listaAlfabetica[i] + "</li>";
+
+    i++
+}
+
 
