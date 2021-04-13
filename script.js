@@ -6,24 +6,20 @@
 var lista = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 var inputUtente = prompt("Inserisci il tuo cognome");
 lista.push(inputUtente);
-console.log(lista)
+console.log(lista);
 
-var listaAlfabetica = lista.sort(function (a, b) {
-    if (a < b) return -1;
-    else if (a > b) return 1;
-    return 0;
-});
+for (i = 0; i < lista.length; i++) {
+    lista[i] = lista[i].toLowerCase();
+}
 
-console.log (listaAlfabetica)
+var listaAlfabetica = lista.sort();
 
-var i= 0;
-var listaDefinitiva = document.getElementById("cognomi")
+console.log(listaAlfabetica);
 
+var listaDefinitiva = document.getElementById("cognomi");
 
-while (i < listaAlfabetica.length) {
+for (i = 0; i < listaAlfabetica.length; i++) {
     listaDefinitiva.innerHTML += "<li>" + (i+1) + ") " + listaAlfabetica[i] + "</li>";
-
-    i++
 }
 
 

@@ -1,0 +1,8 @@
+#cognomi {
+    list-style: none;
+    font-size: 30px;
+}
+
+li {
+    text-transform: capitalize;
+}
